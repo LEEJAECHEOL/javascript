@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .num {font-size: 50px;}
+    </style>
+</head>
+<body>
+    <h1>자바스크립트 예제</h1>
+    <hr />
+    <div id="numBox" class="num">1</div>
+    <button onclick="add()">증가</button>
+    <script>
+        var num = 1;
+        console.log(num);
+        function add(){
+            num += 1;
+            console.log(num);
+            console.log(document.querySelector('#numBox'));
+            document.querySelector('#numBox').textContent = num;
+        }
+    </script>
+</body>
+</html>
