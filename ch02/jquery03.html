@@ -5,20 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 <body>
-    <div id ="box1">1234</div>
-    <button onclick="show()">보이기</button>
-    <button onclick="hide()">숨기기</button>
+    <h1>날 사라지게 해봐요!</h1>
+    <h2>다시 불러볼까요?</h2>
+
     <script>
-        function show(){
-            // $("#box1").html("Hello");
-            $("#box1").show();
-        }
-        function hide(){
-            $("#box1").hide();
-        }
+        $('h1').click(()=>{
+            $('h1').fadeOut(3000);
+        });
+        $('h2').click(()=>{
+            $('h1').fadeIn(3000);
+        });
     </script>
 </body>
 </html>
- 

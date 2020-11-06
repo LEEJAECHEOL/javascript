@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <p>안녕!! 날 클릭해!!</p>
+    <script>
+        // click 함수에 인수는 함수가 들어가야함
+        $('p').click(function(){
+            alert('clicked');
+        });
+        $('p').dblclick(function(){
+            alert('duoble Clicked');
+        });
+        $('p').mouseenter(function(){
+            alert('p tag mouse pointer over');
+        });
+    </script>
+</body>
+</html>
