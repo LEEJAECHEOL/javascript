@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+    <button onclick="add()">더하기</button>
+    <hr/>
+    <div>
+        <span>합계 : </span>
+        <span id="s1"></span>
+    </div>
+    <script>
+        
+        function add(){
+            var num1 = document.querySelector('#num1').value;
+            var num2 = document.querySelector('#num2').value;
+            var sum = Number(num1) + Number(num2);
+            document.querySelector('#s1').textContent = sum;
+        }
+    </script>
+</body>
+</html>
