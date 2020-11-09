@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화 포스터</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .blue {background-color: blue;}
+    </style>
+</head>
+<body>
+    <h1>Jquery CSS</h1>
+    <hr />
+    <h3>AddClass</h3>
+    <button onclick="changeBlue()">AddClass</button>
+    <button onclick="removeBlue()">RemoveClass</button>
+    <button onclick="changeCss()">Change Css</button>
+    <div class="blue">First Design</div>
+    <div id="d2">Second Design</div>
+    <script>
+        function changeBlue(){
+            $("#d2").addClass('blue');
+        }
+        function removeBlue(){
+            $("div").removeClass('blue');
+        }
+        function changeCss(){
+            $('div').css('background-color', 'red');
+        }
+    </script>
+</body>
+</html>
