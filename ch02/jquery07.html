@@ -12,8 +12,8 @@
 </head>
 <body>
     <div id="comment-list">
-        <div id="item-1">댓글1</div>
-        <div id="item-2">댓글2</div>
+        <div id="item-1"><span id="comeent-1">댓글1</span><span id="comment-delete-1" onclick="deleteComment(1)">삭제</span></div>
+        <div id="item-2"><span id="comeent-2">댓글2</span><span id="comment-delete-2" onclick="deleteComment(2)">삭제</span></div>
     </div>
     <hr/>
     <input type="text" id="input-comment" />
@@ -25,16 +25,24 @@
         function addComent(num){
             // append, prepend, after, before
             var text = $('#input-comment').val();
+            // 변수를 가지고 노는 방법 (1) ${변수}
+            // +연산자 변수를 더하가 (경합)
+            var count = 3;
             if(num === 1){
-                $('#comment-list').append(`<div>${text}</div>`);
+                $('#comment-list').append(`<div id="item-${count}">${text}<span onclick ="deleteComment(${count})">삭제</span></div>`);
+                count++;
             }else if(num === 2){
-                $('#comment-list').prepend(`<div>${text}</div>`);
+                $('#comment-list').prepend(`<div id="item-${count}">${text}<span onclick ="deleteComment(${count})">삭제</span></div>`);
+                count++;
             }else if(num === 3){
                 $('#comment-list').after(`<div>${text}</div>`);
             }else {
                 $('#comment-list').before(`<div>${text}</div>`);
             }
             
+        }
+        function deleteComment(id){
+            $("#item-" + id).remove();
         }
     </script>
 </body>
