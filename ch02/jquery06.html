@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화 포스터</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .container {margin: 0 auto;width: 80%;display: flex;justify-content: center;text-align: center;}
+        .movie-item {width: 300px;height: 500px;background-color: #f1f1f1;border: 1px solid grey;box-shadow: 0 0 3px 3px grey;padding:10px;}
+    </style>
+</head>
+<body>
+    <h1>영화 포스터</h1>
+    <button onclick="getMovie()">영화 불러오기</button>
+    <div class="container">
+        <div class="movie-item">
+            <div id="poster">
+                <img id="movie-poster" src="#" alt="" width="290px"height="300px">
+            </div>
+            <div id="title">
+                <p>제목임시</p>
+            </div>
+            <div id="rating">
+                <p>평점임시</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function getMovie(){
+            // 임시 다운로드
+            var movie = {
+                poster : "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5415%2F2020%2F10%2F25%2F0000148391_003_20201025150217851.jpg&type=sc960_832",
+                title : "도굴",
+                rating : 9.1
+             }
+             //set
+             $("#movie-poster").attr("src", movie.poster);
+             $("#title p").text(movie.title);
+             $("#rating p").text(movie.rating);
+        }
+    </script>
+</body>
+</html>

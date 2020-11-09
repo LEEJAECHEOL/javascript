@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화 포스터</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        #comment-list {border: 5px solid black;}
+        #comment-list > div {border: 1px solid red; padding: 10px;}
+    </style>
+</head>
+<body>
+    <div id="comment-list">
+        <div id="item-1">댓글1</div>
+        <div id="item-2">댓글2</div>
+    </div>
+    <hr/>
+    <input type="text" id="input-comment" />
+    <button onclick="addComent(1)">댓글 추가 append</button>
+    <button onclick="addComent(2)">댓글 추가 prepend</button>
+    <button onclick="addComent(3)">댓글 추가 after</button>
+    <button onclick="addComent(4)">댓글 추가 before</button>
+    <script>
+        function addComent(num){
+            // append, prepend, after, before
+            var text = $('#input-comment').val();
+            if(num === 1){
+                $('#comment-list').append(`<div>${text}</div>`);
+            }else if(num === 2){
+                $('#comment-list').prepend(`<div>${text}</div>`);
+            }else if(num === 3){
+                $('#comment-list').after(`<div>${text}</div>`);
+            }else {
+                $('#comment-list').before(`<div>${text}</div>`);
+            }
+            
+        }
+    </script>
+</body>
+</html>
+
+

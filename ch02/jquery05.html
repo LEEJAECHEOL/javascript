@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>text(), html(), val()</h1>
+    <hr/>
+    <div id="text1"><h1>텍스트공간</h1></div>
+    <div id="html2">HTML공간</div>
+    <input type="text" value="love" id="input1">
+    <br/>
+    <button onclick="change3()">input value change</button>
+    <button onclick="change1()">텍스트공간 변경</button>
+    <button onclick="change2()">HTML공간 변경</button>
+    <script>
+        function change1(){
+            // set
+            $('#text1').text('<b>텍스트내용 변경</b>');
+
+            // get
+            console.log($('#text1').text());
+        }
+        function change2(){
+            // set
+            $('#html2').html('<b>HTML내용 변경</b>');
+
+            // get1
+            console.log($('#text1').html());
+        }
+        function change3(){
+            // set
+            $('#input1').val('333');
+
+            // get1
+            console.log($('#input1').val());
+        }
+    </script>
+
+</body>
+</html>
